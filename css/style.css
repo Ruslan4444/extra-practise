@@ -1,0 +1,111 @@
+:root{
+    --main-font:'Roboto', sans-serif;
+    --secondary-font:'PT serif', serif;
+    --first-color-text: #333333 ;
+    --secondary-color-text: #000000;
+    --first-white-color: #ffffff;
+    --accent-color:#64BD22;
+    --placeholder-color-text: #76767a;
+    --button-color: #0061d9;
+    --footer-text-color: rgba(255, 255, 255, 0.8);
+}
+
+
+body{
+    font-family: var(--main-font);
+}
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+/* ===========Section 2 Categories=========== */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.section-title{
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.3
+    
+    color: var(--secondary-color-text);
+}
+
+.categories-text{
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+
+    color:var(--secondary-color-text)
+}
+
+/* ================Section 3 Main activities============= */
+.directions-text{
+font-weight: 400;
+font-size: 16px;
+line-height: 1.31
+
+color: var(--first-color-text);
+}
+
+
+/*===============Photo Gallery===========  */
+.gallery-link{
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+    
+    text-decoration-line: underline;
+    
+    color: #0050B2;
+}
+/* ========FOOTER========= */
+.footer{
+    background-color: rgba(32, 32, 32, 1);
+}
+
+.footer-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-transform: uppercase;
+    
+    color: var(--first-white-color);
+}
+
+.footer-link{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.31;
+
+    color: var(--footer-text-color);
+}
+
+address{
+    font-style: none;
+}
+
+.footer-text{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28;
+
+    color: var(--first-white-color);
+}
