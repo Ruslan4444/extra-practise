@@ -1,55 +1,89 @@
-/* .container {
-  width: 1170px;
+/* * {
+  box-sizing: border-box;
+}
+.container {
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  outline: 1px solid green;
 }
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.list-item {
-  /* width: 370px; */
-/* height: 200px; */
-/* margin-right: 30px;
-  margin-top: 30px; */
-/* background-color: teal;
-  border: 1px solid green;
-}
-.list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px; */
-/* display: flex;
+.section {
+  display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-top: 30px; */
-/* } */
+  margin-right: -10px;
+  margin-top: -10px;
+}
 
-/* ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.list {
-  width: 1120px;
-  margin: 0 auto;
-  background-color: teal;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: 32px;
-}
-.item {
-  width: 256px;
-  height: 256px;
-  background-color: tomato;
-}
 .box {
-  width: 544px;
-  height: 544px;
-  grid-column-start: 3;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  position: relative;
+  width: 370px;
+  height: 404px;
+  background-color: red;
+  border: 5px solid green;
+  margin-right: 10px;
+  margin-top: 10px;
+  flex-grow: 1;
+  animation-name: zoom;
+  animation-duration: 2000ms;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.box::after {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  content: '';
+  display: block;
+  width: calc(100% - 20px);
+  height: 384px;
+  border: 3px dotted yellow;
+  animation-name: point;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+  animation-delay: 1000ms;
+  animation-iteration-count: infinite;
+}
+@keyframes point {
+  0% {
+    border-style: dotted;
+  }
+  100% {
+    border-style: dashed;
+  }
 } */
+
+.contant1 {
+  margin-bottom: 20px;
+}
+.contant2 {
+  display: none;
+  margin-bottom: 20px;
+}
+.input:checked + .contant2 {
+  display: block;
+}
+.label {
+  min-width: 50px;
+  height: 20px;
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: gray;
+}
+.label .less {
+  display: none;
+}
+.input:checked ~ .label .more {
+  display: none;
+}
+.input:checked ~ .label .less {
+  display: inline;
+}
